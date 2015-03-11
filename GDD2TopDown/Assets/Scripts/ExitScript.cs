@@ -7,9 +7,8 @@ public class ExitScript : MonoBehaviour {
 	private string[] Rooms = new string[3] ;
 	private GameObject MainGO;
 	void Start () {
-		Rooms[0] = "RoomA";
-		Rooms[1] = "RoomB";
-		Rooms[2] = "RoomC";
+		Rooms[0] = "WarehouseA";
+		Rooms[1] = "WarehouseB";
 		MainGO = GameObject.FindGameObjectWithTag ("MainObject");
 
 	}
@@ -21,7 +20,7 @@ public class ExitScript : MonoBehaviour {
 
 	//when the player hits the Exit
 	void OnTriggerEnter2D(Collider2D other) {
-		int LevelNum = Random.Range (0, 3);//randomly generate level number
+		int LevelNum = Random.Range (0, 2);//randomly generate level number
 
 		if (other.tag == "Player") {
 
